@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hemanth Aenugula Venkat — Business Data Analyst</title>
+<meta name="description" content="Business Data Analyst specializing in healthcare clinical and payer analytics: SQL, Python, Azure, Snowflake, Databricks, Power BI.">
+<style>
+:root{--bg:#0b1220;--bg2:#101a2c;--panel:#131f34;--hover:#182a47;--border:#223252;--text:#e7edf7;--dim:#93a3c0;--a:#35e0c9;--a2:#7c8fff;--warm:#ffb454;--shadow:0 20px 60px rgba(0,0,0,.45)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6;overflow-x:hidden}
+::selection{background:var(--a);color:#04140f}
+a{color:inherit;text-decoration:none}
+a:focus-visible,.timeline-card:focus-visible{outline:2px solid var(--a);outline-offset:3px}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--a2));z-index:9999}
+#glow{position:fixed;width:420px;height:420px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(53,224,201,.1),rgba(124,143,255,.05) 40%,transparent 70%);transform:translate(-50%,-50%);left:50%;top:20%}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:16px 6vw;backdrop-filter:blur(12px);background:rgba(11,18,32,.7);border-bottom:1px solid transparent;transition:.3s}
+nav.scrolled{border-bottom-color:var(--border);background:rgba(11,18,32,.92)}
+.logo{font-weight:800;font-size:1.15rem;display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--a);box-shadow:0 0 12px var(--a);animation:blink 2.4s ease-in-out infinite}
+@keyframes blink{50%{opacity:.3}}
+.nav-links{display:flex;gap:28px;font-size:.92rem;color:var(--dim)}
+.nav-links a{position:relative;padding:4px 0;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--a),var(--a2));transition:width .25s}
+.nav-links a:hover::after{width:100%}
+.nav-cta{padding:9px 18px;border-radius:999px;border:1px solid var(--a);color:var(--a);font-size:.85rem;font-weight:600;transition:.25s}
+.nav-cta:hover{background:var(--a);color:#04140f}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;background:none;border:0}
+.nav-toggle span{width:24px;height:2px;background:var(--text)}
+section{position:relative;z-index:1;padding:120px 6vw 90px}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;color:var(--a);font-weight:700;margin-bottom:14px}
+.tag::before{content:'';width:26px;height:2px;background:var(--a)}
+h2.title{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;margin-bottom:18px;letter-spacing:-.5px}
+.sub{color:var(--dim);max-width:620px;margin-bottom:50px}
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:110px;overflow:hidden}
+#particles{position:absolute;inset:0;z-index:0;opacity:.55}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;width:100%;position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:7px 14px;border:1px solid var(--border);border-radius:999px;font-size:.82rem;color:var(--dim);margin-bottom:24px;background:rgba(19,31,52,.6)}
+.eyebrow .pulse{width:8px;height:8px;border-radius:50%;background:var(--warm);box-shadow:0 0 10px var(--warm);animation:blink 1.6s infinite}
+h1{font-size:clamp(2.4rem,5.2vw,4rem);font-weight:900;line-height:1.05;letter-spacing:-2px;margin-bottom:22px}
+.hl{background:linear-gradient(100deg,var(--a),var(--a2) 60%);-webkit-background-clip:text;background-clip:text;color:transparent}
+#typed{font-size:clamp(1.05rem,2vw,1.35rem);color:var(--dim);font-weight:500;margin-bottom:28px;min-height:2.4em}
+#typed .cur{display:inline-block;width:2px;background:var(--a);margin-left:2px;animation:blink .9s infinite}
+.hero-desc{color:var(--dim);max-width:560px;margin-bottom:36px}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:48px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:12px;font-weight:700;font-size:.92rem;transition:.25s}
+.btn-p{background:linear-gradient(120deg,var(--a),var(--a2));color:#04140f;box-shadow:0 10px 30px rgba(53,224,201,.25)}
+.btn-p:hover{transform:translateY(-3px)}
+.btn-g{border:1px solid var(--border);background:rgba(255,255,255,.02)}
+.btn-g:hover{border-color:var(--a2);background:rgba(124,143,255,.08);transform:translateY(-3px)}
+.stats{display:flex;gap:34px;flex-wrap:wrap}
+.stat b{display:block;font-size:1.7rem;font-weight:900}
+.stat span{font-size:.78rem;color:var(--dim);text-transform:uppercase;letter-spacing:1px}
+.hero-visual{position:relative;display:flex;justify-content:center}
+.avatar{position:relative;width:320px;height:320px;border-radius:32px;background:linear-gradient(160deg,var(--panel),var(--bg2));border:1px solid var(--border);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center}
+.avatar::before{content:'';position:absolute;inset:-2px;border-radius:34px;padding:2px;background:conic-gradient(from 0deg,var(--a),var(--a2),var(--warm),var(--a));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.initials{font-size:5rem;font-weight:900;letter-spacing:-2px;background:linear-gradient(135deg,var(--a),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.fb{position:absolute;padding:10px 16px;background:var(--panel);border:1px solid var(--border);border-radius:14px;font-size:.8rem;font-weight:700;box-shadow:var(--shadow);animation:float 4s ease-in-out infinite}
+.b1{top:-14px;right:-20px;color:var(--a)}.b2{bottom:10px;left:-40px;color:var(--warm);animation-delay:1.2s}.b3{bottom:-20px;right:10px;color:var(--a2);animation-delay:2s}
+@keyframes float{50%{transform:translateY(-12px)}}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:none}
+#about{background:linear-gradient(180deg,var(--bg),var(--bg2))}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.about-text p{color:var(--dim);margin-bottom:18px}
+.about-text strong{color:var(--text)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.chip{padding:8px 16px;border-radius:999px;border:1px solid var(--border);font-size:.85rem;background:var(--panel);transition:.25s}
+.chip:hover{border-color:var(--a);color:var(--a);transform:translateY(-3px)}
+.stat-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:26px 22px;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:var(--a2);box-shadow:var(--shadow)}
+.card .num{font-size:2.2rem;font-weight:900;background:linear-gradient(120deg,var(--a),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.card .label{color:var(--dim);font-size:.85rem;margin-top:6px}
+.timeline{position:relative;max-width:840px;margin:0 auto}
+.timeline::before{content:'';position:absolute;left:20px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--a),var(--a2),transparent)}
+.t-item{position:relative;padding-left:64px;margin-bottom:20px}
+.t-dot{position:absolute;left:11px;top:6px;width:20px;height:20px;border-radius:50%;background:var(--bg);border:3px solid var(--a);z-index:2;box-shadow:0 0 0 6px rgba(53,224,201,.08)}
+.t-card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:24px 26px;cursor:pointer;transition:.3s}
+.t-card:hover{border-color:var(--a2);background:var(--hover);transform:translateX(6px)}
+.t-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.t-head h3{font-size:1.12rem;font-weight:800}
+.role{color:var(--a);font-weight:600;font-size:.92rem}
+.meta{color:var(--dim);font-size:.82rem;white-space:nowrap}
+.t-body{max-height:0;overflow:hidden;transition:max-height .5s,margin-top .4s;color:var(--dim);font-size:.95rem}
+.t-card.open .t-body{max-height:1200px;margin-top:14px}
+.t-body ul{padding-left:18px}.t-body li{margin-bottom:8px}
+.xi{transition:transform .3s;color:var(--dim);font-size:1.1rem;margin-left:14px}
+.t-card.open .xi{transform:rotate(45deg);color:var(--a)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+#skills{background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.skill h4{font-size:.98rem;font-weight:800;margin-bottom:6px}
+.skill p{color:var(--dim);font-size:.9rem}
+.skill:hover{border-color:var(--a)}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+.proj{display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
+.proj::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--a),var(--a2));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.proj:hover::before{transform:scaleX(1)}
+.proj h3{font-size:1.1rem;font-weight:800;line-height:1.4}
+.proj ul{padding-left:18px;color:var(--dim);font-size:.92rem}.proj li{margin-bottom:8px}
+.stack{display:inline-flex;align-self:flex-start;padding:5px 12px;border-radius:999px;background:rgba(53,224,201,.1);color:var(--a);font-size:.74rem;font-weight:700;line-height:1.5}
+.plink{margin-top:auto;color:var(--a2);font-weight:700;font-size:.88rem}
+.plink:hover{color:var(--a)}
+.edu{max-width:840px}
+.edu .card{margin-bottom:16px}
+.edu h3{font-size:1.05rem;font-weight:800}
+#contact{background:radial-gradient(circle at 30% 20%,rgba(53,224,201,.08),transparent 45%),radial-gradient(circle at 80% 80%,rgba(124,143,255,.08),transparent 45%),var(--bg2);text-align:center}
+#contact .tag{justify-content:center}
+#contact .sub{margin-left:auto;margin-right:auto}
+.link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:700px;margin:0 auto 40px}
+.link-card{display:flex;flex-direction:column;align-items:center;gap:10px;padding:30px 22px;cursor:pointer}
+.link-card:hover{transform:translateY(-8px) scale(1.03);border-color:var(--a)}
+.link-icon{font-size:1.6rem}
+.link-card h4{font-weight:800}.link-card p{color:var(--dim);font-size:.8rem}
+.email{display:inline-flex;gap:10px;padding:16px 30px;border-radius:14px;background:linear-gradient(120deg,var(--a),var(--a2));color:#04140f;font-weight:800;font-size:1.05rem;transition:.25s}
+.email:hover{transform:translateY(-4px)}
+footer{text-align:center;padding:32px 6vw;color:var(--dim);font-size:.82rem;border-top:1px solid var(--border)}
+#toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--panel);border:1px solid var(--a);padding:12px 22px;border-radius:12px;font-size:.88rem;font-weight:600;opacity:0;pointer-events:none;transition:.3s;z-index:9999}
+#toast.show{opacity:1;transform:translateX(-50%)}
+@media(max-width:900px){
+.hero-grid,.about-grid{grid-template-columns:1fr}
+.hero-visual{order:-1;margin-bottom:20px}.avatar{width:220px;height:220px}
+.nav-links{position:fixed;top:0;right:0;height:100vh;width:min(78vw,320px);background:var(--bg2);flex-direction:column;padding:100px 32px;gap:26px;border-left:1px solid var(--border);transform:translateX(100%);transition:transform .35s;font-size:1.05rem}
+.nav-links.open{transform:none}.nav-toggle{display:flex}.nav-cta{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="progress"></div><div id="glow"></div><div id="toast" role="status"></div>
+
+<nav id="nav">
+  <div class="logo"><span class="dot"></span> HV<span style="color:var(--dim);font-weight:500">.data</span></div>
+  <div class="nav-links" id="links">
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="nav-cta">Let's Connect</a>
+  <button class="nav-toggle" id="toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<section id="hero">
+  <canvas id="particles"></canvas>
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow reveal"><span class="pulse"></span> Open to Data &amp; Business Analyst roles</div>
+      <h1 class="reveal">Hi, I'm Hemanth <span class="hl">Aenugula Venkat</span></h1>
+      <div id="typed" class="reveal"></div>
+      <p class="hero-desc reveal">I turn complex healthcare clinical and payer data into dashboards, pipelines, and models that teams use for reporting, performance analytics, and risk analysis. Every year I work with 3M+ healthcare records and claims transactions.</p>
+      <div class="actions reveal">
+        <a href="#projects" class="btn btn-p">View Projects</a>
+        <a href="#contact" class="btn btn-g">Get In Touch</a>
+        <a href="https://www.linkedin.com/in/hemanthav19991225/" target="_blank" rel="noopener" class="btn btn-g">LinkedIn</a>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><b class="counter" data-target="3" data-suffix="+">0</b><span>Years Experience</span></div>
+        <div class="stat"><b class="counter" data-target="3" data-suffix="M+">0</b><span>Records / Year</span></div>
+        <div class="stat"><b class="counter" data-target="15" data-suffix="+">0</b><span>Dashboards Built</span></div>
+        <div class="stat"><b class="counter" data-target="200" data-suffix="+">0</b><span>SQL Queries Tuned</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="fb b1">Power BI</div><div class="fb b2">SQL · Python</div><div class="fb b3">Azure · Snowflake</div>
+      <div class="avatar"><div class="initials">HV</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="tag">Who I Am</div>
+  <h2 class="title reveal">About me</h2>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p>I'm a <strong>Business Data Analyst</strong> with 3+ years of experience in healthcare clinical and payer data. I build scalable analytical datasets, ETL pipelines, clinical data marts, and executive-ready dashboards using <strong>SQL, Python, Azure, Snowflake, and Databricks</strong>.</p>
+      <p>My work spans readmission and outcomes analysis, claims analytics, predictive modeling for risk detection, and cloud data solutions. I keep data quality, governance, security, and regulatory compliance (including HIPAA) central to everything I ship.</p>
+      <p>I hold an M.S. in Information Systems and Technologies from the <strong>University of North Texas</strong>, and I enjoy working with clinical and operations teams to turn reporting needs into analytics they can trust.</p>
+      <div class="chips">
+        <span class="chip">SQL</span><span class="chip">Python</span><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Azure Synapse</span><span class="chip">Snowflake</span><span class="chip">Databricks</span><span class="chip">dbt</span><span class="chip">Airflow</span><span class="chip">Claims Analytics</span><span class="chip">HEDIS</span><span class="chip">FHIR / HL7</span>
+      </div>
+    </div>
+    <div class="stat-cards reveal">
+      <div class="card"><div class="num">24%</div><div class="label">Better identification of high-risk case segments</div></div>
+      <div class="card"><div class="num">19%</div><div class="label">Improved care-quality reporting accuracy</div></div>
+      <div class="card"><div class="num">22%</div><div class="label">Fewer data discrepancies through SQL reconciliation</div></div>
+      <div class="card"><div class="num">2M+</div><div class="label">Claims analyzed for reimbursement anomalies</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="tag">Career Path</div>
+  <h2 class="title reveal">Experience</h2>
+  <p class="sub reveal">Click a role to see the details.</p>
+  <div class="timeline">
+
+    <div class="t-item reveal"><div class="t-dot"></div>
+      <div class="t-card" tabindex="0" role="button" aria-expanded="false">
+        <div class="t-head">
+          <div><h3>Business Data Analyst</h3><div class="role">Summit Healthcare</div></div>
+          <div style="display:flex;align-items:center"><div class="meta">Jan 2026 – Present</div><span class="xi">+</span></div>
+        </div>
+        <div class="t-body"><ul>
+          <li>Analyzed individual outcomes and readmission rates using Epic and T-SQL, performing cohort analysis, risk stratification, and longitudinal data validation while enforcing HIPAA compliance. Improved care-quality reporting accuracy by 19%.</li>
+          <li>Engineered scalable ETL pipelines with Azure Synapse and Azure Data Lake, designing clinical data marts to standardize multi-source healthcare datasets and strengthen consistency across reporting layers.</li>
+          <li>Ran regression analysis and hypothesis testing in Python and Databricks to support predictive modeling for early risk detection, improving identification of high-risk case segments by 24%.</li>
+          <li>Enhanced interactive Power BI dashboards integrated with Power Automate, automating KPI refresh cycles and enabling alert-driven reporting for clinical and operational metrics.</li>
+          <li>Partnered with clinical and operations teams to turn reporting needs into analytical solutions, adding SQL validation and reconciliation checks that cut discrepancies by 22% and strengthened audit readiness.</li>
+        </ul></div>
+      </div>
+    </div>
+
+    <div class="t-item reveal"><div class="t-dot"></div>
+      <div class="t-card" tabindex="0" role="button" aria-expanded="false">
+        <div class="t-head">
+          <div><h3>Data Analyst</h3><div class="role">EXL</div></div>
+          <div style="display:flex;align-items:center"><div class="meta">Aug 2021 – Dec 2023</div><span class="xi">+</span></div>
+        </div>
+        <div class="t-body"><ul>
+          <li>Analyzed payer datasets (claims adjudication, member eligibility, provider utilization) in MySQL, using ICD-10, CPT, and HCPCS codes to detect reimbursement anomalies across 2M+ claims and support cost containment.</li>
+          <li>Designed and optimized healthcare ETL pipelines with Alteryx and dbt, integrating claims, provider, and enrollment data aligned with FHIR/HL7 standards.</li>
+          <li>Built Tableau and SAP BusinessObjects dashboards for denial rates, provider KPIs, and utilization trends across 1.2M+ claims, incorporating HEDIS and Medicare/Medicaid Star metrics.</li>
+          <li>Automated ingestion and transformation of claims data into AWS S3 and Glue, integrating EHR systems to improve data access for analytics and BI.</li>
+          <li>Scheduled and monitored workflows with Airflow and Python, validating 900K+ monthly claim transactions to deliver analytics datasets for population health and risk analytics.</li>
+          <li>Conducted statistical analysis in SAS and R (ggplot, grid) to track approval rates, denial patterns, and provider performance across 750K+ claims, incorporating SDOH analytics.</li>
+          <li>Developed denial-prediction and provider risk-segmentation models with H2O.ai and RapidMiner on 600K+ claims, supporting fraud detection and population health risk stratification.</li>
+        </ul></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <div class="tag">What I Work With</div>
+  <h2 class="title reveal">Technical skills</h2>
+  <div class="grid">
+    <div class="card skill reveal"><h4>Data Analysis &amp; Querying</h4><p>SQL Server, T-SQL, MySQL, PostgreSQL, Google BigQuery</p></div>
+    <div class="card skill reveal"><h4>Visualization &amp; BI</h4><p>Power BI, Tableau, SAP BusinessObjects</p></div>
+    <div class="card skill reveal"><h4>Programming &amp; Statistics</h4><p>Python, SAS, R (ggplot, grid), regression analysis, hypothesis testing, cohort analysis, risk stratification</p></div>
+    <div class="card skill reveal"><h4>Data Engineering &amp; ETL</h4><p>Snowflake, Azure Synapse Analytics, Azure Data Lake, Databricks</p></div>
+    <div class="card skill reveal"><h4>Modeling &amp; Warehousing</h4><p>Data warehousing, star schema, data modeling, clinical data mart design, Medallion architecture</p></div>
+    <div class="card skill reveal"><h4>Automation &amp; Integration</h4><p>Apache Airflow, Alteryx, dbt, Power Automate</p></div>
+    <div class="card skill reveal"><h4>ML, AI &amp; Healthcare Analytics</h4><p>RAG, semantic retrieval, claims analytics, population health and risk analytics</p></div>
+    <div class="card skill reveal"><h4>Healthcare Domain</h4><p>ICD-10, CPT, HCPCS, HEDIS, Medicare/Medicaid Star Ratings, EHR systems, FHIR/HL7</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="tag">Applied Work</div>
+  <h2 class="title reveal">Selected projects</h2>
+  <div class="proj-grid">
+    <div class="card proj reveal">
+      <span class="stack">Snowflake · PostgreSQL · Star Schema · ETL</span>
+      <h3>Modern Data Warehouse Architecture &amp; Analytics Platform</h3>
+      <ul>
+        <li>Designed a SQL Server enterprise data warehouse using Medallion Architecture (Bronze–Silver–Gold), integrating ERP and CRM data into analytics-ready star schemas. Reduced data inconsistencies by 28%.</li>
+        <li>Built automated SQL ETL pipelines for ingestion, cleansing, and transformation, powering KPI dashboards and ad-hoc analytics that sped up decision cycles by 25%.</li>
+      </ul>
+      <a class="plink" href="https://github.com/hemanthvenkat25/Sql-server-Datawarehouse-project" target="_blank" rel="noopener">View on GitHub</a>
+    </div>
+    <div class="card proj reveal">
+      <span class="stack">BigQuery · SQL · FAISS · RAG · Healthcare Analytics</span>
+      <h3>AI-Driven Drug Interaction Analytics Agent</h3>
+      <ul>
+        <li>Built a clinical analytics solution combining structured EHR datasets with unstructured FDA/regulatory documents to detect high-risk drug interactions, improving medication safety insights by 40%+.</li>
+        <li>Used BigQuery and FAISS for data transformation and semantic retrieval, cutting response latency by 30% and improving detection precision by 35%.</li>
+      </ul>
+      <a class="plink" href="https://github.com/hemanthvenkat25/Drug-interaction-detection-agent-using-Agentic-AI" target="_blank" rel="noopener">View on GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="tag">Background</div>
+  <h2 class="title reveal">Education</h2>
+  <div class="edu">
+    <div class="card reveal"><h3>M.S., Information Systems and Technologies</h3><div class="role">University of North Texas, USA</div><div class="meta">Jan 2024 – Dec 2025</div></div>
+    <div class="card reveal"><h3>B.Tech, Electronics and Communication Engineering</h3><div class="role">Amrita School of Engineering, India</div><div class="meta">Aug 2017 – May 2021</div></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="tag">Let's Connect</div>
+  <h2 class="title reveal">Get in touch</h2>
+  <p class="sub reveal">I'm open to Data Analyst and Business Data Analyst roles in healthcare and beyond.</p>
+  <div class="link-grid">
+    <a class="card link-card reveal" href="https://www.linkedin.com/in/hemanthav19991225/" target="_blank" rel="noopener"><div class="link-icon">💼</div><h4>LinkedIn</h4><p>Connect with me</p></a>
+    <div class="card link-card reveal" id="copy" tabindex="0" role="button"><div class="link-icon">✉️</div><h4>Email</h4><p>Click to copy</p></div>
+  </div>
+  <a href="mailto:hemanthvenkat25@gmail.com" class="email reveal">hemanthvenkat25@gmail.com</a>
+</section>
+
+<footer>© <span id="year"></span> Hemanth Aenugula Venkat</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav'),links=document.getElementById('links');
+addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>40);const h=document.documentElement;document.getElementById('progress').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'});
+document.getElementById('toggle').onclick=()=>links.classList.toggle('open');
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+addEventListener('mousemove',e=>{const g=document.getElementById('glow');g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'});
+
+// Typed role line
+const roles=["Business Data Analyst","Healthcare Clinical & Payer Analytics","SQL · Python · Azure · Snowflake","Power BI & Tableau Dashboards"];
+let ri=0,ci=0,del=false;const te=document.getElementById('typed');
+(function type(){const c=roles[ri];if(!del){ci++;if(ci>c.length){del=true;setTimeout(type,1400);return}}else{ci--;if(ci<0){del=false;ri=(ri+1)%roles.length;ci=0}}
+te.innerHTML=c.substring(0,ci)+'<span class="cur">&nbsp;</span>';setTimeout(type,del?35:65)})();
+
+// Reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Counters
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,t=+el.dataset.target,s=el.dataset.suffix||'';let c=0;
+(function step(){c+=t/40;if(c>=t){el.textContent=t+s}else{el.textContent=Math.ceil(c)+s;requestAnimationFrame(step)}})();cio.unobserve(el)}),{threshold:.5});
+document.querySelectorAll('.counter').forEach(el=>cio.observe(el));
+
+// Expandable experience cards
+document.querySelectorAll('.t-card').forEach(c=>{const t=()=>{c.classList.toggle('open');c.setAttribute('aria-expanded',c.classList.contains('open'))};
+c.onclick=t;c.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t()}}});
+
+// Copy email
+const copy=document.getElementById('copy');
+function copyEmail(){navigator.clipboard.writeText('hemanthvenkat25@gmail.com').then(()=>toast('Email copied to clipboard')).catch(()=>toast('hemanthvenkat25@gmail.com'))}
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
+copy.onclick=copyEmail;copy.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();copyEmail()}};
+
+// Hero particles
+const cv=document.getElementById('particles'),cx=cv.getContext('2d');let ps=[];
+function size(){const h=document.getElementById('hero');cv.width=h.offsetWidth;cv.height=h.offsetHeight}
+function init(){ps=[];const n=Math.min(70,Math.floor(cv.width/22));for(let i=0;i<n;i++)ps.push({x:Math.random()*cv.width,y:Math.random()*cv.height,r:Math.random()*1.8+.6,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35})}
+function draw(){cx.clearRect(0,0,cv.width,cv.height);for(let i=0;i<ps.length;i++){const p=ps[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>cv.width)p.vx*=-1;if(p.y<0||p.y>cv.height)p.vy*=-1;
+cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.283);cx.fillStyle='rgba(53,224,201,.55)';cx.fill();
+for(let j=i+1;j<ps.length;j++){const q=ps[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<130){cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(q.x,q.y);cx.strokeStyle='rgba(124,143,255,'+(.18*(1-d/130))+')';cx.stroke()}}}
+requestAnimationFrame(draw)}
+size();init();draw();addEventListener('resize',()=>{size();init()});
+</script>
+</body>
+</html>
